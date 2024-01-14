@@ -1,5 +1,7 @@
 <%= turbo_frame_tag :announcements do %>
-  <div class="fixed bg-white rounded max-w-lg p-4 right-3 top-3 bottom-3 shadow-md border overflow-y-scroll ">
+  <div class="fixed bg-white rounded max-w-lg p-4 right-3 top-3 bottom-3 shadow-md border overflow-y-scroll" data-controller="announcements">
+    <button data-action="announcements#close">close</button>
+
     <%= render "announcements_list", announcements: @announcements %>
   </div>
 <% end %>
