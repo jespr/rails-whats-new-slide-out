@@ -1,0 +1,22 @@
+<div id="<%= dom_id announcement %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= announcement.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Body:</strong>
+    <%= announcement.body %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Announcement type:</strong>
+    <%= announcement.announcement_type %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this announcement", announcement, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this announcement", edit_announcement_path(announcement), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
