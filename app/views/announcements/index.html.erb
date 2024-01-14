@@ -8,7 +8,5 @@
     <%= link_to "New announcement", new_announcement_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="announcements" class="min-w-full">
-    <%= render @announcements %>
-  </div>
+  <%= render "announcements_list", announcements: @announcements %>
 </div>
